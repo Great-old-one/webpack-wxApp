@@ -1,0 +1,8 @@
+@function rpx($number) {
+  @return $number*1rpx
+}
+
+.shop {
+  font-size: rpx(30);
+  color: green;
+}

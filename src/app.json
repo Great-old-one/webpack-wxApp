@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#37363B",
+    "navigationBarTitleText": "卡友微服务",
+    "navigationBarTextStyle": "white"
+  }
+}
