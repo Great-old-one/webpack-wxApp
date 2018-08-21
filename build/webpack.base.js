@@ -5,9 +5,10 @@ const glob = require("glob")
 const wxAppWebpackPlugin = require("../plugins/wxapp-webpack-plugin/index")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const utils = require("./utils")
 
 function resolve(dir) {
-    return path.join(__dirname,"../", dir)
+    return path.join(__dirname, "../", dir)
 }
 
 function getEntry(rootSrc, pattern) {
@@ -28,7 +29,6 @@ const pagesEntry = getEntry(resolve('./src'), 'pages/**/index.js')
 const componentsEntry = getEntry(resolve('./src'), 'components/**/index.js')
 
 const entry = Object.assign({}, appEntry, pagesEntry, componentsEntry)
-
 module.exports = {
     entry: entry,
     output: {
@@ -60,17 +60,26 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(sa|sc)ss$/,
+                test: /\.(sa|sc|c|le)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ],
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg|png|gif|jpeg|jpg)\??.*$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 50000,
+                    name: utils.assetsPath('img/[name].[ext]')
+                }
             }
         ]
     },
+
     plugins: [
-        new cleanWebpackPlugin(["dist"]),
+        new cleanWebpackPlugin([resolve("./dist")], {root: resolve("./")}),
         new CopyWebpackPlugin(
             [{from: "./", to: "./"}],
             {
