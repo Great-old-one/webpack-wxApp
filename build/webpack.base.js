@@ -22,11 +22,11 @@ function getEntry(rootSrc, pattern) {
 }
 
 //应用入口
-const appEntry = {main: './src/main.js'}
+const appEntry = {main: './src/main.ts'}
 //页面入口
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/index.js')
+const pagesEntry = getEntry(resolve('./src'), 'pages/**/index.ts')
 //组件入口
-const componentsEntry = getEntry(resolve('./src'), 'components/**/index.js')
+const componentsEntry = getEntry(resolve('./src'), 'components/**/index.ts')
 
 const entry = Object.assign({}, appEntry, pagesEntry, componentsEntry)
 module.exports = {
@@ -50,13 +50,30 @@ module.exports = {
         },
         runtimeChunk: 'single'
     },
+    resolve: {
+        extensions: ['.js', '.json', '.ts',],
+        alias: {
+            'vue': 'mpvue',
+            '@': resolve('src'),
+        },
+        symlinks: false
+    },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                include: [resolve('src')],
+                test: /\.tsx?$/,
+                // include: [resolve('src'), resolve('test')],
+                exclude: /node_modules/,
                 use: [
                     'babel-loader',
+                    {
+                        // loader: 'ts-loader',
+                        loader: 'awesome-typescript-loader',
+                        options: {
+                            // errorsAsWarnings: true,
+                            useCache: true,
+                        }
+                    }
                 ]
             },
             {

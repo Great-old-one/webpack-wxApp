@@ -1,7 +1,6 @@
 <view class="index">
     <text>I am a page</text>
-    <view class="content">333333</view>
-    <test></test>
+    <view class="content">335553333</view>
     <text>{{name}}</text>
     <button bindtap="goShop">商城</button>
 </view>

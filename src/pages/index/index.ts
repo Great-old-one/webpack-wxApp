@@ -1,10 +1,12 @@
 import _ from "lodash"
 import "./index.scss"
-import {Tpage} from "../../utils/wxapp-typescript-decorator"
+import {Tpage, wxApp} from "../../utils/wxapp-typescript-decorator/index"
+
 
 @Tpage
-class Index {
+class Index extends wxApp {
     constructor() {
+        super()
         this.data = {
             name: "great"
         }
