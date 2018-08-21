@@ -2,5 +2,6 @@
     <text>I am a page</text>
     <view class="content">333333</view>
     <test></test>
+    <text>{{name}}</text>
     <button bindtap="goShop">商城</button>
 </view>
