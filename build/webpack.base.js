@@ -68,10 +68,10 @@ module.exports = {
                     'babel-loader',
                     {
                         // loader: 'ts-loader',
-                        loader: 'awesome-typescript-loader',
+                        loader: 'ts-loader',
                         options: {
                             // errorsAsWarnings: true,
-                            useCache: true,
+                            //useCache: true,
                         }
                     }
                 ]

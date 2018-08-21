@@ -35,14 +35,14 @@
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
+    "tencent-wx-app": "^1.1.201712221707",
     "toposort": "^2.0.2",
     "transform-runtime": "0.0.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^2.7.2",
     "url-loader": "^1.1.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
-    "webpack-merge": "^4.1.4",
-    "tencent-wx-app": "^1.1.201712221707",
-    "typescript": "^2.7.2",
-    "awesome-typescript-loader": "^4.0.1"
+    "webpack-merge": "^4.1.4"
   }
 }
