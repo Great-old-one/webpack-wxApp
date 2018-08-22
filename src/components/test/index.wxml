@@ -1,1 +1,2 @@
 <view> I am a component </view>
+<view>{{name}}:{{age}}</view>

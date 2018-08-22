@@ -3,4 +3,5 @@
     <view class="content">3353334444553333</view>
     <text>{{name}}</text>
     <button bindtap="goShop">商城</button>
+    <test></test>
 </view>

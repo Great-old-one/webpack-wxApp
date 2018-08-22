@@ -17,7 +17,7 @@ class Index extends wxApp {
     }
 
     goShop() {
-        this.setData({name: "张三"})
+        //this.setData({name: "张三"})
         /* wx.navigateTo({
              url: '/pages/shop/index'
          })*/
