@@ -1,4 +1,4 @@
-import {Tapp} from "./utils/wxapp-typescript-decorator/index"
+import {Tapp} from "@/utils/wxapp-typescript-decorator/index"
 
 @Tapp
 class App {

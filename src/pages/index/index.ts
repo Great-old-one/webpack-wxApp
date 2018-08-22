@@ -1,6 +1,6 @@
 import _ from "lodash"
 import "./index.scss"
-import {Tpage, wxApp} from "../../utils/wxapp-typescript-decorator/index"
+import {Tpage, wxApp} from "@/utils/wxapp-typescript-decorator/index"
 
 
 @Tpage

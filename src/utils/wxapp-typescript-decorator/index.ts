@@ -84,7 +84,6 @@ function getComponentOptions<T extends componentOptions>(target: any): T {
     Object.keys(instance).forEach((key) => {
         options[key] = instance[key]
     })
-    console.log(options)
     return options
 }
 
