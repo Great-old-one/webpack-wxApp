@@ -6,7 +6,8 @@ const wxAppWebpackPlugin = require("../plugins/wxapp-webpack-plugin/index")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const utils = require("./utils")
-
+const webpack = require("webpack")
+var config = require('../config')
 function resolve(dir) {
     return path.join(__dirname, "../", dir)
 }
@@ -53,7 +54,6 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.json', '.ts',],
         alias: {
-            'vue': 'mpvue',
             '@': resolve('src'),
         },
         symlinks: false
@@ -110,6 +110,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].wxss"
         }),
-        new LodashModuleReplacementPlugin()
+        new LodashModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: "development"
+            }
+        }),
     ]
 }
