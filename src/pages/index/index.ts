@@ -1,27 +1,17 @@
-import _ from "lodash"
 import "./index.scss"
-import {Tpage, wxApp} from "@/utils/wxapp-typescript-decorator/index"
-
+const {Tpage, wxApp} = require("bx-wxapp-ts-decorator")
+import {sayName} from "@/pages/index/helps/sayName";
 
 @Tpage
 class Index extends wxApp {
     constructor() {
         super()
-        this.data = {
-            name: "great"
-        }
+        this.data = {}
     }
 
     onLoad() {
-        console.log(_.join(["I am a page", "test"]))
-    }
-
-    goShop() {
-        this.setData({name: "张三"})
-        /* wx.navigateTo({
-             url: '/pages/shop/index'
-         })*/
+        console.log("我是页面")
+        sayName()
     }
 }
-
 

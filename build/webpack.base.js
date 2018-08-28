@@ -2,12 +2,13 @@ const path = require('path')
 const cleanWebpackPlugin = require("clean-webpack-plugin")
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const glob = require("glob")
-const wxAppWebpackPlugin = require("../plugins/wxapp-webpack-plugin/index")
+const wxAppWebpackPlugin = require("bx-wxapp-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const utils = require("./utils")
 const webpack = require("webpack")
 var config = require('../config')
+
 function resolve(dir) {
     return path.join(__dirname, "../", dir)
 }
@@ -35,7 +36,10 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: resolve("dist"),
-        globalObject: "global"
+        globalObject: "global",
+        publicPath: process.env.NODE_ENV === 'production'
+            ? config.build.assetsPublicPath
+            : config.dev.assetsPublicPath
     },
     //must not be eval
     devtool: "none",
@@ -62,17 +66,12 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                // include: [resolve('src'), resolve('test')],
+                include: [resolve('src')],
                 exclude: /node_modules/,
                 use: [
                     'babel-loader',
                     {
-                        // loader: 'ts-loader',
                         loader: 'ts-loader',
-                        options: {
-                            // errorsAsWarnings: true,
-                            //useCache: true,
-                        }
                     }
                 ]
             },
@@ -112,9 +111,7 @@ module.exports = {
         }),
         new LodashModuleReplacementPlugin(),
         new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: "development"
-            }
-        }),
+            'process.env': config.dev.env
+        })
     ]
 }

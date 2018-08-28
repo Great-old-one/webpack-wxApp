@@ -1,8 +1,8 @@
-import {Tapp} from "@/utils/wxapp-typescript-decorator/index"
-
+//import {Tapp} from "bx-"
+const {Tapp}=require("bx-wxapp-ts-decorator")
 @Tapp
-class App {
+class Index {
     onLaunch() {
-        console.log("hello")
+        console.log("我是小程序")
     }
 }

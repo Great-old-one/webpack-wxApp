@@ -1,28 +1,14 @@
-import {wxApp, Tcomponent} from "@/utils/wxapp-typescript-decorator";
+const {wxApp, Tcomponent} = require("bx-wxapp-ts-decorator")
 
 @Tcomponent
 class Test extends wxApp {
     constructor() {
         super()
-        this.data = {
-            name: "曹启兵"
-        }
-        this.properties = {
-            age: {
-                type: String,
-                value: "1111",
-                observer: () => {
-                    this.onChange()
-                }
-            }
-        }
+        this.data = {}
+        this.properties = {}
     }
 
     attached() {
-        this.setData({age: "2000"})
-    }
-
-    onChange() {
-        console.log("我是组件内部方法")
+        console.log("我是组件")
     }
 }
