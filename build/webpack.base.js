@@ -7,6 +7,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const utils = require("./utils")
 const webpack = require("webpack")
+const wxappNpmPlugin = require("bx-wxapp-npm-plugin")
+
 var config = require('../config')
 
 function resolve(dir) {
@@ -112,6 +114,7 @@ module.exports = {
         new LodashModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env': config.dev.env
-        })
+        }),
+        new wxappNpmPlugin()
     ]
 }

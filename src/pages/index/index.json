@@ -1,5 +1,7 @@
 {
-  "usingComponents":{
-    "test":"../../components/test/index"
+  "usingComponents": {
+    "test": "../../components/test/index",
+    "navigator-bar":"miniprogram-navigation-bar/index",
+    "navigator-scroll":"miniprogram-slide-view/index"
   }
 }
