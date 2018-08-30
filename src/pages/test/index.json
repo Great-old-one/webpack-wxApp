@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "test": "../../components/test/index",
+    "navigator-scroll":"miniprogram-slide-view/index"
+  }
+}

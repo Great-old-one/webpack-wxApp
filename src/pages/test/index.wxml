@@ -1,0 +1,13 @@
+<view class="index">
+    <text>I am a page</text>
+    <test>I am a component</test>
+    <view class="content"></view>
+
+    <navigation-bar
+            bindnavback="onnavback"
+            enable="{{enable}}"
+            show-loading="{{loading}}"
+            title="{{title}}">
+
+    </navigation-bar>
+</view>
