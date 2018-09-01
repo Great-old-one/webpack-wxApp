@@ -21,4 +21,10 @@
         </recycle-item>
         <view slot="after">长列表后面的内容</view>
     </recycle-view>
+    <bx-button>我是测试自己的npm</bx-button>
+    <bx-row>
+        <bx-col span="5">1</bx-col>
+        <bx-col span="10">2</bx-col>
+        <bx-col span="2">3</bx-col>
+    </bx-row>
 </view>

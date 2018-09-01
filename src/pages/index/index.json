@@ -3,7 +3,9 @@
     "test": "../../components/test/index",
     "navigator-bar":"miniprogram-navigation-bar/index",
     "recycle-view": "miniprogram-recycle-view/recycle-view",
-    "recycle-item": "miniprogram-recycle-view/recycle-item"
-
+    "recycle-item": "miniprogram-recycle-view/recycle-item",
+    "bx-button":"bxUi/button/index",
+    "bx-row":"bxUi/row",
+    "bx-col":"bxUi/col/col"
   }
 }
