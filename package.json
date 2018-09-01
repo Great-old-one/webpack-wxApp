@@ -29,7 +29,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "bx-wxapp-npm-plugin": "^1.0.0",
+    "bx-wxapp-npm-plugin": "^1.0.1",
     "bx-wxapp-webpack-plugin": "^1.0.1",
     "chalk": "^2.4.1",
     "clean-webpack-plugin": "^0.1.19",
