@@ -1,12 +1,31 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/listing/index",
+    "pages/mine/index",
+    "pages/vad/index",
+    "pages/login/index"
   ],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#F03D37",
+    "list": [
+      {
+        "pagePath": "pages/listing/index",
+        "text": "客户清单",
+        "iconPath": "resources/images/ic-listing.png",
+        "selectedIconPath": "resources/images/ic-listing-selected.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "个人中心",
+        "iconPath": "resources/images/ic-mine.png",
+        "selectedIconPath": "resources/images/ic-mine-selected.png"
+      }]
+  },
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#37363B",
-    "navigationBarTitleText": "卡友微服务",
-    "navigationBarTextStyle": "white",
-    "navigationStyle": "custom"
+    "navigationBarTitleText": "卖车宝",
+    "navigationBarTextStyle": "white"
   }
 }

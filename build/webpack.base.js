@@ -26,11 +26,11 @@ function getEntry(rootSrc, pattern) {
 }
 
 //应用入口
-const appEntry = {main: './src/main.ts'}
+const appEntry = {main: './src/main.js'}
 //页面入口
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/index.ts')
+const pagesEntry = getEntry(resolve('./src'), 'pages/**/index.js')
 //组件入口
-const componentsEntry = getEntry(resolve('./src'), 'components/**/index.ts')
+const componentsEntry = getEntry(resolve('./src'), 'components/**/index.js')
 
 const entry = Object.assign({}, appEntry, pagesEntry, componentsEntry)
 module.exports = {
@@ -66,17 +66,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.tsx?$/,
-                include: [resolve('src')],
-                exclude: /node_modules/,
-                use: [
-                    'babel-loader',
-                    {
-                        loader: 'ts-loader',
-                    }
-                ]
-            },
             {
                 test: /\.(sa|sc|c|le)ss$/,
                 use: [

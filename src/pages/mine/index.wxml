@@ -1,0 +1,33 @@
+<view id="mine">
+    <view class="banner">
+        <block wx:if="{{!userId}}">
+            <view class="banner-left">
+                <image src="../../resources/images/mine-avatar.png" class="banner-avatar"/>
+            </view>
+            <view class="banner-center-no">您还未登录</view>
+            <view class="banner-right" catchtap="login">登录</view>
+        </block>
+        <block wx:else>
+            <view class="banner-left">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <view class="banner-center">
+                <view>
+                    <open-data type="userNickName"></open-data>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="content">
+        <view class="item" bindtap="updateName">
+            <text>联系人姓名</text>
+            <image src="../../resources/images/mine-arrow.png" class="content-arrow"></image>
+            <text class="item-text">{{userInfo.name||"暂无"}}</text>
+        </view>
+        <view class="item" bindtap="bindMobile">
+            <text>绑定手机号</text>
+            <image src="../../resources/images/mine-arrow.png" class="content-arrow"></image>
+            <view class="item-text">{{userInfo.mobile||"暂无"}}</view>
+        </view>
+    </view>
+</view>
