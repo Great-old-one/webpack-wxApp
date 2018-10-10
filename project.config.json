@@ -1,5 +1,5 @@
 {
-	"description": "卖车宝小程序",
+	"description": "使用webpack和npm开发小程序",
 	"setting": {
 		"urlCheck": false,
 		"es6": false,
@@ -10,7 +10,7 @@
 	"miniprogramRoot": "dist/",
 	"compileType": "miniprogram",
 	"appid": "wx357cc673b5352920",
-	"projectname": "%E7%99%BE%E5%A7%93%E7%BD%91%E5%8D%96%E8%BD%A6%E5%AE%9D",
+	"projectname": "webpack-wxapp",
 	"condition": {
 		"search": {
 			"current": -1,

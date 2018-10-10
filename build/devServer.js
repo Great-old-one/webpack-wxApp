@@ -1,11 +1,11 @@
-var config = require('../config')
+const config = require('../config')
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
-var webpack = require('webpack')
-var webpackConfig = require('./webpack.dev')
-var compiler = webpack(webpackConfig)
-var chalk = require("chalk")
+const webpack = require('webpack')
+const webpackConfig = require('./webpack.dev')
+const compiler = webpack(webpackConfig)
+const chalk = require("chalk")
 
 console.log(chalk.green('> Starting dev compiler...'))
 

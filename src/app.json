@@ -1,31 +1,11 @@
 {
   "pages": [
-    "pages/listing/index",
-    "pages/mine/index",
-    "pages/vad/index",
-    "pages/login/index"
+    "pages/index/index"
   ],
-  "tabBar": {
-    "color": "#666",
-    "selectedColor": "#F03D37",
-    "list": [
-      {
-        "pagePath": "pages/listing/index",
-        "text": "客户清单",
-        "iconPath": "resources/images/ic-listing.png",
-        "selectedIconPath": "resources/images/ic-listing-selected.png"
-      },
-      {
-        "pagePath": "pages/mine/index",
-        "text": "个人中心",
-        "iconPath": "resources/images/ic-mine.png",
-        "selectedIconPath": "resources/images/ic-mine-selected.png"
-      }]
-  },
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#37363B",
-    "navigationBarTitleText": "卖车宝",
+    "navigationBarTitleText": "微信小程序",
     "navigationBarTextStyle": "white"
   }
 }

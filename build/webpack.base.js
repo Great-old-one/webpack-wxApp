@@ -9,17 +9,17 @@ const utils = require("./utils")
 const webpack = require("webpack")
 const wxappNpmPlugin = require("bx-wxapp-npm-plugin")
 
-var config = require('../config')
+const config = require('../config')
 
 function resolve(dir) {
     return path.join(__dirname, "../", dir)
 }
 
 function getEntry(rootSrc, pattern) {
-    var files = glob.sync(path.resolve(rootSrc, pattern))
+    const files = glob.sync(path.resolve(rootSrc, pattern))
     return files.reduce((res, file) => {
-        var info = path.parse(file)
-        var key = "/" + info.dir.slice(rootSrc.length + 1) + '/' + info.name
+        const info = path.parse(file)
+        const key = "/" + info.dir.slice(rootSrc.length + 1) + '/' + info.name
         res[key] = path.resolve(file)
         return res
     }, {})
@@ -39,9 +39,6 @@ module.exports = {
         filename: "[name].js",
         path: resolve("dist"),
         globalObject: "global",
-        publicPath: process.env.NODE_ENV === 'production'
-            ? config.build.assetsPublicPath
-            : config.dev.assetsPublicPath
     },
     //must not be eval
     devtool: "none",
@@ -78,6 +75,7 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|svg|png|gif|jpeg|jpg)\??.*$/,
                 loader: 'url-loader',
                 query: {
+                    //低于5000会被转化为base64
                     limit: 50000,
                     name: utils.assetsPath('img/[name].[ext]')
                 }
