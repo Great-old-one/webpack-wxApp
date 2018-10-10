@@ -13,6 +13,7 @@
   "dependencies": {
     "@types/lodash": "^4.14.116",
     "bx-wxapp-ts-decorator": "^1.0.3bx",
+    "bx-wxapp-webpack-plugin": "^1.0.2",
     "lodash": "^4.17.10",
     "miniprogram-navigation-bar": "0.0.4",
     "miniprogram-recycle-view": "0.0.6",
@@ -30,7 +31,6 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "bx-wxapp-npm-plugin": "^1.0.1",
-    "bx-wxapp-webpack-plugin": "^1.0.1",
     "chalk": "^2.4.1",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",

@@ -6,10 +6,8 @@ const wxAppWebpackPlugin = require("bx-wxapp-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const utils = require("./utils")
-const webpack = require("webpack")
 const wxappNpmPlugin = require("bx-wxapp-npm-plugin")
 
-const config = require('../config')
 
 function resolve(dir) {
     return path.join(__dirname, "../", dir)
@@ -26,7 +24,7 @@ function getEntry(rootSrc, pattern) {
 }
 
 //应用入口
-const appEntry = {main: './src/main.js'}
+const appEntry = {app: './src/app.js'}
 //页面入口
 const pagesEntry = getEntry(resolve('./src'), 'pages/**/index.js')
 //组件入口
@@ -99,9 +97,6 @@ module.exports = {
             filename: "[name].wxss"
         }),
         new LodashModuleReplacementPlugin(),
-        new webpack.DefinePlugin({
-            'process.env': config.dev.env
-        }),
         new wxappNpmPlugin()
     ]
 }
