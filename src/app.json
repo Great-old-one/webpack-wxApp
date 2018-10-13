@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/home/index",
+    "pages/shop/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

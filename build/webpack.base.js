@@ -43,11 +43,21 @@ module.exports = {
     optimization: {
         splitChunks: {
             cacheGroups: {
+                //node_modules
                 vendor: {
-                    "chunks": "all",
+                    chunks: "all",
                     test: /[\\/]node_modules[\\/]/,
                     name: 'vendors',
-                }
+                    minChunks:2
+                },
+                //其他公用代码
+                common: {
+                    chunks: 'all',
+                    test:/[\\/]src[\\/]/,
+                    minChunks: 2,
+                    name:"commons",
+                    minSize:0
+                },
             }
         },
         runtimeChunk: 'single'

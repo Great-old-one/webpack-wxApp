@@ -1,7 +1,11 @@
 import "./app.scss"
+import _ from "lodash"
+import {sayName} from "./utils"
 
 App({
 	onLaunch(){
-		console.log("hello i a wxapp")
+        console.log(_.join(["i","am","appqqqqqqq"]))
+		_.assign({},{name:"age"})
+        sayName("李四")
 	}
 })
