@@ -100,9 +100,7 @@ module.exports = {
                 context: resolve('src'),
             }
         ),
-        new wxAppWebpackPlugin({
-            filename: "app.js"
-        }),
+        new wxAppWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].wxss"
         }),

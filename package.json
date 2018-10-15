@@ -13,7 +13,7 @@
   "dependencies": {
     "@types/lodash": "^4.14.116",
     "bx-wxapp-ts-decorator": "^1.0.3bx",
-    "bx-wxapp-webpack-plugin": "^1.0.2",
+    "bx-wxapp-webpack-plugin": "^1.0.5",
     "lodash": "^4.17.10",
     "miniprogram-navigation-bar": "0.0.4",
     "miniprogram-recycle-view": "0.0.6",
